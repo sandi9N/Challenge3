@@ -1,4 +1,6 @@
 fun main(args:Array<String>){
+
+
     do {
         println("===========================")
         println("Anda Masuk Dalam Game Suit")
@@ -17,24 +19,25 @@ fun main(args:Array<String>){
         }
         else if (a!=1)
         {
-            println("\n Salah Pilih Broo !!!\n")
+            break
         }
     }
     while (a<2||a!=1)
 
 }
 
-
+val player = Human()
+val komputer = Computer()
 fun playgame() {
     println("========================================")
     val pilihan = arrayOf("Gunting", "Batu", "Kertas")
     println("========================================")
-    var komputer = pilihan.random()
+    var komputer = komputer.choice()
     println("Masukan Antara (Gunting, Batu, Kertas) ")
     println("========================================")
     print("Input : ")
 
-    var player = readLine()
+    var player = player.choice()
     var status = false
 
 //    Menentukan peraturan
